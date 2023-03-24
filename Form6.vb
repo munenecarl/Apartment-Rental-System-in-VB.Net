@@ -14,9 +14,9 @@ Public Class Form6
     Dim sqlQuery As String
     Dim sqlcomm1 As New MySqlCommand
 
-    Dim server As String = "localhost"
-    Dim username As String = "root"
-    Dim password As String = "@26678462caM"
+    Dim server As String = servername
+    Dim username As String = username
+    Dim password As String = password
     Dim database_name As String = "apartment_rental_system"
 
     Private Sub Login()
@@ -38,10 +38,6 @@ Public Class Form6
         sqlconn.Close()
     End Sub
 
-
-
-
-
     Private Sub SignUp()
         sqlconn.ConnectionString = "server =" + server + ";" + "username =" + username + ";" _
             + "password =" + password + ";" + "database =" + database_name
@@ -56,10 +52,6 @@ Public Class Form6
         sqlconn.Dispose()
         Form1.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 
     Private Sub BunifuButton1_Click(sender As Object, e As EventArgs) Handles BunifuButton1.Click
@@ -80,26 +72,4 @@ Public Class Form6
     Private Sub BunifuButton2_Click(sender As Object, e As EventArgs) Handles BunifuButton2.Click
         SignUp()
     End Sub
-
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub BunifuTextBox2_TextChanged(sender As Object, e As EventArgs) Handles BunifuTextBox2.TextChanged
-
-    End Sub
-
-    Private Sub BunifuTextBox2_LostFocus(sender As Object, e As EventArgs) Handles BunifuTextBox2.LostFocus
-
-    End Sub
-
-    Private Sub BunifuTextBox1_TextChanged(sender As Object, e As EventArgs) Handles BunifuTextBox1.TextChanged
-
-    End Sub
-
-
 End Class
