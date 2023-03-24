@@ -11,9 +11,9 @@ Public Class Form5
     Dim sqlQuery As String
     Dim sqlcomm1 As New MySqlCommand
 
-    Dim server As String = "localhost"
-    Dim username As String = "root"
-    Dim password As String = "@26678462caM"
+    Dim server As String = servername
+    Dim username As String = username
+    Dim password As String = password
     Dim database_name As String = "apartment_rental_system"
     Private Sub HouseItems()
         sqlconn.ConnectionString = "server =" + server + ";" + "username =" + username + ";" _
@@ -125,25 +125,6 @@ Public Class Form5
         HouseItems()
         Cleaner_Details()
     End Sub
-
-    Private Sub BunifuTextBox1_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-
-    End Sub
-
-
-
-    Private Sub ComboBox2_LostFocus(sender As Object, e As EventArgs) Handles ComboBox2.LostFocus
-
-    End Sub
-
-    Private Sub ComboBox2_TextChanged(sender As Object, e As EventArgs) Handles ComboBox2.TextChanged
-
-    End Sub
-
     Private Sub BunifuButton3_Click(sender As Object, e As EventArgs) Handles BunifuButton3.Click
         'Dim Com As New MySqlCommand("delete from table apartment_rental_system.tenant_table where tenant_id = @id", sqlconn)
         'Com.Parameters.AddWithValue("id", BunifuDataGridView1.SelectedRows(i).Cells(0).Value.ToString())
@@ -183,6 +164,5 @@ Public Class Form5
 
     Private Sub BunifuButton2_Click(sender As Object, e As EventArgs) Handles BunifuButton2.Click
         EnterCleanerData()
-
     End Sub
 End Class
