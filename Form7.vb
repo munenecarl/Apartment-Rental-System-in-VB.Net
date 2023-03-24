@@ -10,9 +10,9 @@ Public Class Form7
     Dim sqlQuery As String
     Dim sqlcomm1 As New MySqlCommand
 
-    Dim server As String = "localhost"
-    Dim username As String = "root"
-    Dim password As String = "@26678462caM"
+    Dim server As String = servername
+    Dim username As String = username
+    Dim password As String = password
     Dim database_name As String = "apartment_rental_system"
 
     Private Sub EnterCleanerData()
